@@ -297,7 +297,7 @@ end
 x = tspan;
 Y_fit = phi(:,1);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 
@@ -328,7 +328,7 @@ end
 x = tspan;
 Y_fit = phi(:,2);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 
@@ -354,7 +354,7 @@ end
 x = tspan;
 Y_fit = phi(:,4);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 plot(t,phi(:,4),'k-','LineWidth',1.5,'MarkerSize',8)
@@ -389,20 +389,20 @@ box off
 set(gca,'FontName','Helvetica','FontSize',15,'FontWeight','bold','linewidth',1.2)
 
 subplot(2,2,4)
-alphaData = ones(9,9);  % 初始化为全不透明
-alphaData(:, r:9) = 0.2;  % 设置右半部分透明度为 0.2
+alphaData = ones(9,9);  % 
+alphaData(:, r:9) = 0.2;  % 
 
 imagesc(1:9,1:9,abs(U),'AlphaData', alphaData);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'XTick',1:9,'xticklabel',{'U_1','U_2','U_3','U_4','U_5','U_6','U_7','U_8','U_9'},...
     'YTick',1:9,'yticklabel',{'\lambda_{A\beta}','\lambda_\tau',...
     '\lambda_{N\tau_p}','\lambda_{CN}','\lambda_{C\tau}',...
@@ -433,7 +433,7 @@ end
 x = tspan;
 Y_fit = phi(:,3);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 plot(t,phi(:,3),'k-','LineWidth',1.5)
