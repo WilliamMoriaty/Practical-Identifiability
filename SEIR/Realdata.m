@@ -118,7 +118,7 @@ end
 x = tspan;
 Y_fit = phi(:,3);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 
 hold on
@@ -166,20 +166,20 @@ set(gca,'xticklabel',{'U_1^T\theta','U_2^T\theta','U_3^T\theta'},'YScale','log')
 set(gca,'FontName','Helvetica','FontSize',15,'FontWeight','bold','linewidth',1.2)
 box off
 subplot(1,4,4)
-alphadata = ones(3,3);  % 初始化为全不透明
-alphadata(:, r:3) = 0.2;  % 设置右半部分透明度为 0.2
+alphadata = ones(3,3);  % 
+alphadata(:, r:3) = 0.2;  % 
 
 imagesc(1:3,1:3,abs(U),'Alphadata',alphadata);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 12;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 12;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\beta','\sigma','\gamma'})
 set(gca,'FontName','Helvetica','FontSize',15,'FontWeight','bold','linewidth',1.2)
@@ -200,7 +200,7 @@ end
 x = tspan;
 Y_fit = phi(:,3);
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 
