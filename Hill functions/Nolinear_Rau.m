@@ -1,9 +1,9 @@
 fig1=figure(1);
 clf();
 set(gcf,'Position',[298,525,957,243])
-Vmax = 1.0;  % 最大反应速率
-Kd = 3.0;    % 解离常数
-n = 8;       % Hill系数
+Vmax = 1.0;  % 
+Kd = 3.0;    % 
+n = 8;       % 
 N1 = 6;
 VM = 8;      % maximum concentration
 
