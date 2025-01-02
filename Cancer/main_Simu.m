@@ -161,20 +161,20 @@ fig4=figure(4);
 clf();
 set(gcf,'Position',[18,477,1456,264])
 subplot(1,3,1)
-alphaData = ones(10,10);  % 初始化为全不透明
-alphaData(:, r:10) = 0.2;  % 设置右半部分透明度为 0.2
+alphaData = ones(10,10);  
+alphaData(:, r:10) = 0.2;  
 
 imagesc(1:10,1:10,abs(U),'AlphaData',alphaData);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'XTick',1:10,'xticklabel',{'U_1','U_2','U_3','U_4','U_5','U_6','U_7','U_8','U_9','U_{10}'},...
     'YTick',1:10,'yticklabel',{'\sigma','\rho','\eta','\mu','\epsilon','\beta_1','\beta_2','\phi','\lambda','\psi'})
 %title('\theta=[\sigma,\rho,\eta,\mu,\epsilon,\beta_1,\beta_2,\phi,\lambda,\psi]','FontSize',14,'FontWeight','bold')
@@ -183,20 +183,20 @@ box off
 set(gca,'FontName','Helvetica','FontSize',12,'FontWeight','bold','linewidth',1.2)
 
 subplot(1,3,2)
-alphaData = ones(10,10);  % 初始化为全不透明
-alphaData(:, r1:10) = 0.2;  % 设置右半部分透明度为 0.2
+alphaData = ones(10,10);  % 
+alphaData(:, r1:10) = 0.2;  % 
 
 imagesc(1:10,1:10,abs(U1),'AlphaData',alphaData);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'XTick',1:10,'xticklabel',{'U_1','U_2','U_3','U_4','U_5','U_6','U_7','U_8','U_9','U_{10}'},...
     'YTick',1:10,'yticklabel',{'\sigma','\rho','\eta','\mu','\epsilon','\beta_1','\beta_2','\phi','\lambda','\psi'})
 %title('\theta=[\sigma,\rho,\eta,\mu,\epsilon,\beta_1,\beta_2,\phi,\lambda,\psi]','FontSize',14,'FontWeight','bold')
@@ -205,20 +205,20 @@ box off
 set(gca,'FontName','Helvetica','FontSize',12,'FontWeight','bold','linewidth',1.2)
 
 subplot(1,3,3)
-alphaData = ones(10,10);  % 初始化为全不透明
-alphaData(:, r2:10) = 0.2;  % 设置右半部分透明度为 0.2
+alphaData = ones(10,10);  % 
+alphaData(:, r2:10) = 0.2;  % 
 
 imagesc(1:10,1:10,abs(U2),'AlphaData',alphaData);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'XTick',1:10,'xticklabel',{'U_1','U_2','U_3','U_4','U_5','U_6','U_7','U_8','U_9','U_{10}'},...
     'YTick',1:10,'yticklabel',{'\sigma','\rho','\eta','\mu','\epsilon','\beta_1','\beta_2','\phi','\lambda','\psi'})
 %title('\theta=[\sigma,\rho,\eta,\mu,\epsilon,\beta_1,\beta_2,\phi,\lambda,\psi]','FontSize',14,'FontWeight','bold')
@@ -551,7 +551,7 @@ yyaxis right
 x = tspan*t0;
 Y_fit = sum(yexp2,2)/nn;
 CI=1.96*sqrt(Var_NN');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 hold on
 plot(x, Y_fit, 'r', 'LineWidth', 2,'LineStyle','-'); 
