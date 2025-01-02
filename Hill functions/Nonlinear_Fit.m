@@ -129,15 +129,15 @@ fig3=figure(3);
 clf();
 set(gcf,'Position',[298,525,319,243])
 x = 1.6:1.6:8.0;
-x3 = [3.2,5.8,0.4];  % 配体浓度范围
+x3 = [3.2,5.8,0.4];  % 
 N1 = size(x,2);
 x1 = linspace(0,VM,N2);
 x2 = [x x3];
-% 计算Hill函数值
+% 
 y = hill_function(x, Vmax, Kd, n);
 y1 = hill_function(x1, Vmax, Kd, n);
 
-% 绘图
+% 
 plot(x, y,'ko','markersize',8,'LineWidth',1.2);
 
 hold on
