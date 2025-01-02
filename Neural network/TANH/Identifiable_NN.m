@@ -49,7 +49,7 @@ end
 x = t1;
 Y_fit = phi;
 CI=1.96*sqrt(Var_NN3');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 % 
 
@@ -110,7 +110,7 @@ end
 x = t1;
 Y_fit = phi;
 CI=1.96*sqrt(Var_NN1');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 % 
 
@@ -169,7 +169,7 @@ end
 x = t1;
 Y_fit = phi;
 CI=1.96*sqrt(Var_NN2');
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 % 
 
@@ -320,7 +320,7 @@ box off
 % x = t1;
 % Y_fit = phi;
 % CI=1.96*sqrt(Var_NN');
-% % 绘制置信区域（拟合曲线上下的置信区间）
+% % 
 % fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 % % 
 % 
@@ -423,7 +423,7 @@ box off
 % x = t1;
 % Y_fit = phi;
 % CI=1.96*sqrt(Var_NN');
-% % 绘制置信区域（拟合曲线上下的置信区间）
+% % 
 % fill([x'; flipud(x')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 % % 
 % 
