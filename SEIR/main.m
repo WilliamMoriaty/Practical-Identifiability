@@ -347,20 +347,20 @@ fig3=figure(3);
 clf();
 set(gcf,'Position',[-67,463,1620,249])
 subplot(1,4,1)
-alphadata = ones(3,3);  % 初始化为全不透明
-alphadata(:, r:3) = 0.2;  % 设置右半部分透明度为 0.2
+alphadata = ones(3,3);  % 
+alphadata(:, r:3) = 0.2;  % 
 
 imagesc(1:3,1:3,abs(U),'Alphadata',alphadata);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\beta','\sigma','\gamma'})
 title('data I','FontSize',14,'FontWeight','bold')
@@ -371,15 +371,15 @@ subplot(1,4,2)
 
 imagesc(1:3,1:3,abs(U13));
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\beta','\sigma','\gamma'})
 title('data I & S','FontSize',14,'FontWeight','bold')
@@ -388,15 +388,15 @@ set(gca,'FontName','Helvetica','FontSize',15,'FontWeight','bold','linewidth',1.2
 subplot(1,4,3)
 imagesc(1:3,1:3,abs(U23));
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\beta','\sigma','\gamma'})
 title('data I & E','FontSize',14,'FontWeight','bold')
@@ -405,15 +405,15 @@ set(gca,'FontName','Helvetica','FontSize',15,'FontWeight','bold','linewidth',1.2
 subplot(1,4,4)
 imagesc(1:3,1:3,abs(U123));
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.0])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 15;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 15;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\beta','\sigma','\gamma'})
 title('data I & E & S','FontSize',14,'FontWeight','bold')
