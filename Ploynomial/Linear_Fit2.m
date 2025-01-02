@@ -1,7 +1,7 @@
 fig1=figure(1);
 clf();
 set(gcf,'Position',[780,134,275,678])
-% 设定参数
+% 
 theta1 = 1.0; 
 theta2 = 1.0;    
 theta3 = 1.0;    
@@ -10,14 +10,14 @@ N2=50;
 x = linspace(1, 3, N1);  % fit data
 x1 = linspace(0,4,N2); %uncertainty data
 subplot(3,1,2)
-% 计算polynomial函数值 
+% 
 y = poly_function(x, theta1,theta2,theta3);
 y1 = poly_function(x1, theta1,theta2,theta3);
 yy=zeros(N1,3);
 for i=1:N1
 yy(i,:)=poly_para(x(i));
 end
-% 绘图
+% 
 plot(x(1:N1), y(1:N1),'ko','MarkerSize',8,'LineWidth',1.2);
 
 hold on
@@ -41,7 +41,7 @@ end
 sigma_th=10;
 Y_fit=y1(1:N2)';
 CI=1.96*sqrt(sigma_th*Var);
-% 绘制置信区域（拟合曲线上下的置信区间）
+% 
 fill([x1'; flipud(x1')], [Y_fit + CI; flipud(Y_fit - CI)], 'r', 'FaceAlpha', 0.3, 'EdgeColor', 'none');
 
 xlabel('t');
@@ -59,7 +59,7 @@ box off
 subplot(3,1,3)
 x = linspace(1, 3, N1);  % fit data
 x1 = linspace(0,4,N2); %uncertainty data
-% 计算polynomial函数值 
+% 
 y = poly_function(x, theta1,theta2,theta3);
 y1 = poly_function(x1, theta1,theta2,theta3);
 [U,Sigma,V]=svd(yy'*yy);
@@ -92,20 +92,20 @@ box off
 
 subplot(3,1,1)
 
-alphaData = ones(3,3);  % 初始化为全不透明
-alphaData(:, 3:3) = 0.05;  % 设置右半部分透明度为 0.2
+alphaData = ones(3,3);  %
+alphaData(:, 3:3) = 0.05;  % 
 
 imagesc(1:3,1:3,abs(U),'AlphaData',alphaData);
 
-% 设置 colormap
+% 
 cmap = othercolor('BuDRd_12');
-colormap(cmap);  % 可以选择其他 colormap 例如 'jet', 'hot', 'cool' 等
+colormap(cmap);  % 
 clim([0,1.1])
-% 添加 colorbar 并设置标签
+% 
 c = colorbar;
-c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 设置 colorbar 的标签
-c.FontSize = 12;  % 调整字体大小
-c.Label.FontWeight = 'bold';  % 设置字体加粗
+c.Label.String = '|\partial U_i^T\theta/\partial \theta_j|';  % 
+c.FontSize = 12;  % 
+c.Label.FontWeight = 'bold';  % 
 set(gca,'FontWeight','bold','FontSize',12)
 set(gca,'xticklabel',{'U_1','U_2','U_3'},...
     'YTick',1:3,'yticklabel',{'\theta_1','\theta_2','\theta_3'})
