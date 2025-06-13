@@ -18,25 +18,17 @@ M = 5;
 m1 = size(t,2);
 alpha = zeros(1,3);
 sigmak = Sigma(3,3);
-for m=m1:M+m1
+for m=m1+1:M+m1
 T = max(t)+dt;
-t = [t,T];
 
-for i=1:size(t,2)
-yy(i,:)=hill_para(t(i),Vmax,Kd,n);
-end
+yy=hill_para(T,Vmax,Kd,n);
+x = diag((yy*U(:,end))'*yy*U(:,end));
+non_zero_indices = x ~= 0;
+num_non_zero = sum(non_zero_indices);
 
-for j=1:3
-alpha(j)=yy(j,:)*U(:,j);
-end
-if size(find(alpha==0)) > 0
-    continue;
-end
-
-[~,Sigma,~]=svd(yy'*yy);
-sigmak = Sigma(3,3);
-if sigmak > eps
+if num_non_zero > 0
     break;
 end
+
 
 end

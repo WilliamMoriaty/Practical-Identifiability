@@ -34,7 +34,7 @@ M = 5;
 m1 = size(t,2);
 alpha = zeros(1,3);
 sigmak = Sigma(3,3);
-for m=m1:M+m1
+for m=m1+1:M+m1
 T = max(t)+dt;
 t = [t,T];
 
@@ -47,18 +47,13 @@ x0 =[x0;y0];
 Patial_phi4_theta = [Xi1(:,4) Xi2(:,4) Xi3(:,4)];
 S = Patial_phi4_theta;
 
+x = diag((S*U(:,end))'*S*U(:,end));
+non_zero_indices = x ~= 0;
+num_non_zero = sum(non_zero_indices);
 
-for j=2:4
-alpha(j-1)=S(j,:)*U(:,j-1);
-end
-% if size(find(alpha==0)) > 0
-%     continue;
-% end
-F = S'* S;
-[~,Sigma,~]=svd(F);
-sigmak = Sigma(3,3);
-if sigmak > eps
+if num_non_zero > 0
     break;
 end
 
 end
+m = m-1;
