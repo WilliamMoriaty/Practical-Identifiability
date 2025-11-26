@@ -4,16 +4,5 @@ Our framework is presented as follows:
 
 <img width="416" alt="image" src="https://github.com/user-attachments/assets/4e9bd260-1600-4a6e-aaaa-55a279b07208" />
 
-@article{https://doi.org/10.1002/advs.202504346,
-author = {Wang, Shun and Hao, Wenrui},
-title = {A Systematic Computational Framework for Practical Identifiability Analysis in Mathematical Models Arising from Biology},
-journal = {Advanced Science},
-volume = {12},
-number = {35},
-pages = {e04346},
-keywords = {optimal data collection, parameter regularization, practical identifiability, uncertainty quantification},
-doi = {https://doi.org/10.1002/advs.202504346},
-url = {https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/advs.202504346},
-year = {2025}
-}
-
+# Reference
+S. Wang and W. Hao, “ A Systematic Computational Framework for Practical Identifiability Analysis in Mathematical Models Arising from Biology.” Adv. Sci. 12, no. 35 (2025): 12, e04346. https://doi.org/10.1002/advs.202504346
